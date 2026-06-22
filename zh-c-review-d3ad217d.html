@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常查询笔记 · 球探</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #fafafa;
+            color: #1e1e1e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            line-height: 1.7;
+            font-weight: 400;
+            padding: 2.5rem 1rem;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            padding: 2.8rem 2rem 3.2rem;
+        }
+        /* 标题层级 */
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 500;
+            letter-spacing: -0.015em;
+            line-height: 1.3;
+            margin-bottom: 0.3rem;
+        }
+        .hero-title sup {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #9e9e9e;
+            margin-left: 8px;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #5a5a5a;
+            margin-top: 0.2rem;
+            margin-bottom: 2.2rem;
+            border-left: 3px solid #d0d0d0;
+            padding-left: 1rem;
+            font-weight: 380;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 480;
+            margin: 2.2rem 0 0.9rem;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 440;
+            margin: 1.8rem 0 0.6rem;
+            color: #2c2c2c;
+        }
+        p {
+            margin: 0.9rem 0;
+            text-align: left;
+        }
+        .intro-para {
+            font-size: 1.08rem;
+            color: #2e2e2e;
+        }
+        /* 引用块 */
+        .insight-block {
+            background: #f3f3f3;
+            border-left: 5px solid #8b8b8b;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0;
+            border-radius: 0 16px 16px 0;
+            font-style: normal;
+            color: #333;
+        }
+        .insight-block p {
+            margin: 0.3rem 0;
+        }
+        .insight-label {
+            font-size: 0.85rem;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            color: #7a7a7a;
+            font-weight: 450;
+            margin-bottom: 0.2rem;
+        }
+        /* 列表与卡片等 */
+        .scene-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.4rem 0 1rem;
+        }
+        .scene-item {
+            background: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            padding: 0.8rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            color: #2d2d2d;
+            transition: background 0.15s, box-shadow 0.15s;
+        }
+        .scene-item:hover {
+            background: #efefef;
+            box-shadow: 0 0 0 2px #dadada;
+        }
+        .faq-mini {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #ebebeb;
+        }
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+        .faq-q {
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+        .faq-q::before {
+            content: "▸";
+            color: #b0b0b0;
+            font-size: 1.2rem;
+        }
+        .faq-a {
+            color: #4a4a4a;
+            margin-left: 1.3rem;
+            padding-left: 0.2rem;
+        }
+        .cta-line {
+            margin: 2.2rem 0 0.2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 450;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #2563eb;
+            color: #1d4ed8;
+        }
+        .footer-note {
+            margin-top: 2.8rem;
+            font-size: 0.85rem;
+            color: #8c8c8c;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+            padding-top: 1.8rem;
+        }
+        /* 响应式 */
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.8rem 1.2rem 2.2rem;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .subhead {
+                font-size: 1rem;
+                padding-left: 0.8rem;
+            }
+            .scene-grid {
+                gap: 0.6rem;
+            }
+            .scene-item {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            .insight-block {
+                padding: 1rem 1.2rem;
+            }
+        }
+        @media (max-width: 380px) {
+            .hero-title {
+                font-size: 1.7rem;
+            }
+            body {
+                padding: 1rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 标题区 -->
+    <div class="hero-title">
+        球探<sup>· 查询手记</sup>
+    </div>
+    <div class="subhead">
+        对照、延伸与日常翻阅 —— 慢下来，反而看得更清楚
+    </div>
+
+    <!-- 导语 -->
+    <p class="intro-para">
+        这一年，我养成了一个算不上习惯的习惯：每次打开 <strong><a href="https://zh-c-qiutan.com">球探</a></strong> 之前，都会先想一想，自己究竟要查什么。是某个联赛的积分细节，还是某位球员近五场的跑动路线？又或者，只是随便翻翻，从一场比赛的数据里，找一点叙述的灵感。
+    </p>
+
+    <!-- 正文第一段 -->
+    <h2>对照，不是比较</h2>
+    <p>
+        很多时候我们看数据是为了「比个高低」。但我不太喜欢那种语气。我更愿意把 <strong><a href="https://zh-c-qiutan.com">球探</a></strong> 当作一个安静的参考资料库：左边是主队近况，右边是客队轮换习惯，中间夹着自己临时起意的猜测。对照不是为了证明谁对谁错，而是让自己看到更多侧面。比如某支球队客场战绩一般，但仔细看，他们总是在上半场最后十分钟丢球——这种细碎规律，光靠印象是抓不住的。
+    </p>
+    <p>
+        有一次我跟朋友聊起某个中游球队的冬窗操作，两个人都模模糊糊，就一起打开 <strong><a href="https://zh-c-qiutan.com">球探</a></strong> 翻了几页出场时间分布，才确认自己的猜测。这种「翻到答案」的满足感很轻，但很持久。
+    </p>
+
+    <!-- 引用 / 提示块 -->
+    <div class="insight-block">
+        <div class="insight-label">┃ 延伸阅读提示</div>
+        <p>如果某一项数据让你停下来，多问一句“然后呢”——<br>试着把页面往下拉，看看同联赛的其他球队，或者切换一个赛季。很多叙事缝隙，往往藏在相邻的几行记录里。</p>
+    </div>
+
+    <!-- 正文第二段 -->
+    <h2>三种日常场景</h2>
+    <p>用久了之后，我发现自己反复进入 <strong><a href="https://zh-c-qiutan.com">球探</a></strong> 的场景其实很固定，但也从来不会觉得重复：</p>
+    <div class="scene-grid">
+        <span class="scene-item">📋 周末前查赛程与阵容新闻</span>
+        <span class="scene-item">📊 赛后对照个人笔记与官方统计</span>
+        <span class="scene-item">📎 横向对比不同联赛的相似球队</span>
+    </div>
+    <p style="margin-top: 0.8rem;">
+        第三种场景我最喜欢。比如把德甲某支高位逼抢的队伍，和英超一支风格接近的球队放在一起看——虽然联赛不同，但一些基础数据（压迫次数、反击转化率）放在同一个页面里，很容易看出战术执行的差异。这不代表什么，只是读起来有趣。
+    </p>
+
+    <!-- 第三段 更生活化的叙述 -->
+    <h3>关于「延伸阅读」这件事</h3>
+    <p>
+        数据本身是干的，但数据之间的连接是湿的。好几次，我在 <strong><a href="https://zh-c-qiutan.com">球探</a></strong> 里看到一个意外的数字（比如某位后卫的向前传球次数突然升高），顺藤摸瓜看了那场比赛的片段，才发现球队战术悄悄变了。这种「从数字到画面」的延伸，对我来说比任何分析文章都更有说服力。
+    </p>
+    <p>
+        所以我现在很少带着「一定要查到什么」的目的去打开它。更多时候，只是点进去，看看最近有哪些队伍出现了有趣的数据波动，然后随手记两行。就像翻一本没有目录的书，每次都能落到不同的段落。
+    </p>
+
+    <!-- 微型 FAQ 摘要 -->
+    <div class="faq-mini">
+        <h3 style="margin-top: 0;">偶尔会遇到的几个问题</h3>
+        <div class="faq-item">
+            <div class="faq-q">数据更新频率稳定吗？</div>
+            <div class="faq-a">常规联赛通常在赛后两小时内更新，我个人的体验是基本可靠。遇到大型杯赛或跨日赛事，偶尔会有延迟，但不会太久。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">手机浏览器上看会不会不方便？</div>
+            <div class="faq-a">我大部分时间用手机看，表格会自动适配，横屏时更舒服。搜索框也够大，点起来不费劲。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">可以相信所有数据吗？</div>
+            <div class="faq-a">作为日常参考完全足够。如果是做严谨分析，建议交叉核对官方来源。但就「快速获取概览」而言，它一直很稳。</div>
+        </div>
+    </div>
+
+    <!-- 访问句（自然嵌入） -->
+    <p class="cta-line">
+        最近一次打开 <strong><a href="https://zh-c-qiutan.com">球探</a></strong>，是周三晚上，我本来只想看一眼某个前锋的出场时间，结果被一场杯赛的传球图吸引，最后看了四十分钟录像。这种事经常发生。
+    </p>
+
+    <!-- 页脚 -->
+    <div class="footer-note">
+        日常查询笔记 · 仅代表个人使用感受
+    </div>
+</div>
+</body>
+</html>
